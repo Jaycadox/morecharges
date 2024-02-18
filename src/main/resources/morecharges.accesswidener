@@ -1,0 +1,5 @@
+accessWidener v2 named
+accessible   field   net/minecraft/entity/mob/CreeperEntity   fuseTime   I
+accessible field net/minecraft/entity/mob/CreeperEntity currentFuseTime I
+accessible method net/minecraft/entity/projectile/AbstractWindChargeEntity <init> (Lnet/minecraft/entity/EntityType;DDDDDDLnet/minecraft/world/World;)V
+

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "morecharges",
+  "version": "${version}",
+
+  "name": "MoreCharges",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "accessWidener": "morecharges.accesswidener",
+  "license": "MIT",
+  "icon": "",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "xyz.jayphen.morecharges.client.MoreChargesClient"
+    ],
+    "main": [
+      "xyz.jayphen.morecharges.MoreCharges"
+    ]
+  },
+
+  "mixins": [
+    "morecharges.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+        "fabric": "*",
+    "minecraft": "1.20.5-alpha.24.7.a"
+  }
+}

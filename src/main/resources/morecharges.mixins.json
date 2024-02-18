@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xyz.jayphen.morecharges.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "CreeperDropEarthChargeMixin",
+    "EndermanEntityMixin",
+    "EntityMixin",
+    "PlayerEntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

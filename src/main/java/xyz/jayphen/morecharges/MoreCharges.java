@@ -9,11 +9,9 @@ import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.projectile.AbstractWindChargeEntity;
-import net.minecraft.entity.projectile.WindChargeEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.WindChargeItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.server.world.ServerWorld;
@@ -70,17 +68,13 @@ public class MoreCharges implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.add(EARTH_CHARGE);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> content.add(EARTH_CHARGE));
 
         registerDispenser(EARTH_CHARGE, EarthChargeEntity::new);
         registerDispenser(ENDER_CHARGE, EnderChargeEntity::new);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.add(EARTH_CHARGE);
-            content.add(ENDER_CHARGE);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> content.add(EARTH_CHARGE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> content.add(ENDER_CHARGE));
     }
 }
 
